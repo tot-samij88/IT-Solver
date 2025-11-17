@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT SOLVER — Digital Engineering & Cyber Security</title>
+  <link rel="stylesheet" href="design.css" />
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">IT SOLVER</div>
+      <nav class="nav">
+        <a href="#about">Про нас</a>
+        <a href="#services">Напрямки</a>
+        <a href="#works">Кейси</a>
+        <a href="#pricing">Формати</a>
+        <a href="#process">Як ми працюємо</a>
+        <a href="#team">Команда</a>
+        <a href="#contact" class="btn btn-small">Зв’язатися</a>
+      </nav>
+      <button class="burger" id="burger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">Про нас</a>
+      <a href="#services">Напрямки</a>
+      <a href="#works">Кейси</a>
+      <a href="#pricing">Формати</a>
+      <a href="#process">Як ми працюємо</a>
+      <a href="#team">Команда</a>
+      <a href="#contact" class="btn btn-small full-width">Зв’язатися</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <p class="eyebrow">Digital engineering & cyber security corporation</p>
+          <h1>IT SOLVER — інженерні, програмні та безпекові рішення «під ключ»</h1>
+          <p class="hero-text">
+            Ми створюємо сайти, програмні продукти, кіберзахисні рішення та власні платформи
+            для бізнесу й державного сектору. Від ідеї та архітектури до CI/CD, інфраструктури
+            та супроводу.
+          </p>
+
+          <div class="hero-directions">
+            <span class="hero-pill">Web Agency</span>
+            <span class="hero-pill">Software</span>
+            <span class="hero-pill">Cyber Security</span>
+            <span class="hero-pill">Products</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Обговорити проєкт</a>
+            <a href="#services" class="link-ghost">Подивитися напрямки</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-title">Full cycle</div>
+              <div class="stat-sub">Архітектура, розробка, DevOps, аудит безпеки</div>
+            </div>
+            <div>
+              <div class="stat-title">4× напрямки</div>
+              <div class="stat-sub">Web, Software, Cyber Security, Products</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card hero-card-main">
+            <div class="hero-card-badge">IT SOLVER</div>
+            <h3>Від односторінкового сайту до криптообмінки</h3>
+            <p>Єдина команда, яка закриває дизайн, бекенд, інфраструктуру та безпеку.</p>
+            <ul>
+              <li>Сайти та Telegram-боти</li>
+              <li>CRM, LMS, продуктові платформи</li>
+              <li>VPN, мережі, політики безпеки</li>
+              <li>Фінтех та крипто-продукти</li>
+            </ul>
+          </div>
+
+          <div class="hero-image-card">
+            <!-- Заміни src на свій макет / зображення -->
+            <!-- <img
+              src="./img/11111111111.png"
+              alt="IT SOLVER Digital"
+            /> -->
+            <dotlottie-wc src="./img/test.lottie" autoplay loop style="width: 100%; height: auto;">
+            </dotlottie-wc>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / MISSION -->
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="two-col-left">
+          <h2>Про IT SOLVER</h2>
+          <p class="section-subtitle">
+            IT SOLVER — корпорація, яка поєднує інженерію, продуктову розробку
+            та кібербезпеку. Ми працюємо в українській юрисдикції та розуміємо
+            вимоги як бізнесу, так і державних структур.
+          </p>
+
+          <div class="about-highlight">
+            <h3>Mission</h3>
+            <p>
+              Забезпечувати клієнтів надійними цифровими системами, які розв’язують
+              конкретні задачі, відповідають вимогам безпеки та залишаються керованими
+              для подальшого розвитку.
+            </p>
+          </div>
+
+          <div class="about-highlight about-highlight-light">
+            <h3>Vision</h3>
+            <p>
+              Створити екосистему рішень, в якій державні органи й бізнес отримують
+              прозору архітектуру, контроль за даними і захищену інфраструктуру, а
+              продуктові команди — швидкість запуску без втрати безпеки.
+            </p>
+          </div>
+        </div>
+
+        <div class="two-col-right about-list">
+          <h4>Що відрізняє IT SOLVER</h4>
+          <ul>
+            <li>Архітектура перед розробкою, а не навпаки.</li>
+            <li>Розуміння вимог законодавства України та ДССЗЗІ.</li>
+            <li>DevOps-підхід: CI/CD, моніторинг, логування з першого дня.</li>
+            <li>Продуктове мислення: метрики, які можна порахувати.</li>
+            <li>Фокус на довгостроковій підтримці та масштабуванні.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / DIRECTIONS -->
+    <section class="section section-muted" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Напрямки IT SOLVER</h2>
+          <p class="section-subtitle">
+            Від швидких односторінкових сайтів до комплексних систем для держсектора
+            та фінтех-продуктів.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- Web Agency -->
+          <article class="card">
+            <div class="card-label">Web Agency</div>
+            <h3>Сайти, дизайн, Telegram-боти</h3>
+            <p>
+              Оперативно створюємо лендінги, промо-сайти та базові рішення з акцентом
+              на швидкий результат і чисту реалізацію.
+            </p>
+            <ul class="card-list">
+              <li>Односторінкові сайти та портфоліо</li>
+              <li>UI/UX-дизайн та фірмовий стиль</li>
+              <li>Правки існуючих сайтів, «як СТО для авто»</li>
+              <li>Telegram-боти із записом, оплатами, CRM-логікою</li>
+            </ul>
+          </article>
+
+          <!-- Software -->
+          <article class="card">
+            <div class="card-label">Software</div>
+            <h3>Продуктова та системна розробка</h3>
+            <p>
+              Архітектуруємо та розробляємо складні системи: від CRM до криптообмінок
+              та освітніх платформ.
+            </p>
+            <ul class="card-list">
+              <li>Архітектура з нуля, техдизайн</li>
+              <li>CRM, LMS, аналітичні та фінансові системи</li>
+              <li>Інтеграція великих open-source-рішень</li>
+              <li>Розгортання в приватних мережах, Docker / Kubernetes</li>
+            </ul>
+          </article>
+
+          <!-- Cyber Security -->
+          <article class="card">
+            <div class="card-label">Cyber Security</div>
+            <h3>Кібербезпека для бізнесу та держави</h3>
+            <p>
+              Комплексний підхід до захисту: від мережевої архітектури до журналювання
+              інцидентів, з урахуванням вимог України.
+            </p>
+            <ul class="card-list">
+              <li>Аудит стану інформаційної безпеки</li>
+              <li>Проєктування сегментованих захищених мереж</li>
+              <li>VPN, міжмережеві екрани, системи виявлення інцидентів</li>
+              <li>
+                Рекомендації щодо приведення ІКС у стан, сумісний з вимогами ДССЗЗІ
+                (без виконання функцій органу сертифікації)
+              </li>
+            </ul>
+          </article>
+
+          <!-- Products -->
+          <article class="card">
+            <div class="card-label">Products</div>
+            <h3>Власні продукти IT SOLVER</h3>
+            <p>
+              Розвиваємо свої рішення, які можуть бути інтегровані у вашу інфраструктуру
+              або працювати як окремі сервіси.
+            </p>
+            <ul class="card-list">
+              <li>Система онлайн-платежів по Україні (аналог Fondy)</li>
+              <li>Платформа для запуску курсів «під ключ»</li>
+              <li>Автоматична криптообмінка, DeFi-сервіси</li>
+              <li>Інструменти автоматизації внутрішніх процесів</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS / CASES -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-header">
+          <h2>Вибрані сценарії та кейси</h2>
+          <p class="section-subtitle">
+            Без назв брендів, але з реальними задачами, які наші команди виконують
+            для бізнесу та держсектора.
+          </p>
+        </div>
+
+        <div class="works-grid">
+          <div class="work-card">
+            <div class="work-thumb">
+              <img src="https://via.placeholder.com/520x320?text=Transport+Landing" alt="Transport landing" />
+            </div>
+            <h3>Лендінг для транспортної компанії</h3>
+            <p>
+              Web Agency: промо-сайт + інтеграція форм, месенджерів, базове SEO.
+              Результат — зростання заявок з органічного пошуку та реклами.
+            </p>
+          </div>
+
+          <div class="work-card">
+            <div class="work-thumb">
+              <img src="https://via.placeholder.com/520x320?text=Sales+CRM" alt="Sales CRM" />
+            </div>
+            <h3>CRM для відділу продажів</h3>
+            <p>
+              Software: роли, воронка, дашборди, інтеграція з телефонею та e-mail.
+              Прозора аналітика для керівництва та автоматизація рутини.
+            </p>
+          </div>
+
+          <div class="work-card">
+            <div class="work-thumb">
+              <img src="https://via.placeholder.com/520x320?text=Secure+Gov+Network" alt="Gov network" />
+            </div>
+            <h3>Захищена мережа для держоргану</h3>
+            <p>
+              Cyber Security: сегментація, VPN, централізоване логування, рекомендації
+              щодо узгодження з внутрішніми профілями безпеки.
+            </p>
+          </div>
+
+          <div class="work-card">
+            <div class="work-thumb">
+              <img src="https://via.placeholder.com/520x320?text=Payment+Gateway" alt="Payment gateway" />
+            </div>
+            <h3>Платіжний шлюз для мерчантів</h3>
+            <p>
+              Products: API для інтернет-магазинів, кабінет мерчанта, логіка виплат та звітів —
+              українське рішення рівня локальних платіжних сервісів.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING / ENGAGEMENT MODELS -->
+    <section class="section section-muted" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Формати співпраці</h2>
+          <p class="section-subtitle">
+            Ми не прив’язані до жорстких тарифів: кожен формат адаптується під
+            масштаб задачі, технологічний стек та вимоги безпеки.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card card-pricing">
+            <h3>Project-based</h3>
+            <p>
+              Фіксований проєкт з визначеним обсягом робіт: сайт, платформа, інтеграція чи
+              впровадження кіберзахисних рішень.
+            </p>
+            <ul class="card-list">
+              <li>ТЗ та архітектурний дизайн</li>
+              <li>План робіт, етапність, дедлайни</li>
+              <li>Гарантійний період підтримки</li>
+            </ul>
+            <div class="pricing-note">Більше підходить для чітко сформованих задач.</div>
+          </div>
+
+          <div class="card card-pricing">
+            <h3>Dedicated Team</h3>
+            <p>
+              Виділена команда IT SOLVER, яка інтегрується у ваші процеси: розробка, DevOps,
+              кібербезпека, продукт.
+            </p>
+            <ul class="card-list">
+              <li>Фіксована або змішана місячна ставка</li>
+              <li>Пріоритизація задач разом з вашою командою</li>
+              <li>Довгострокове планування розвитку</li>
+            </ul>
+            <div class="pricing-note">Для постійного розвитку продукту чи інфраструктури.</div>
+          </div>
+
+          <div class="card card-pricing">
+            <h3>Consulting & Audit</h3>
+            <p>
+              Разові або регулярні консультації, аудит архітектури, безпеки, кодової бази
+              та інфраструктури.
+            </p>
+            <ul class="card-list">
+              <li>Аудит архітектури, DevOps-ланцюга</li>
+              <li>Оцінка кіберризиків та рекомендації</li>
+              <li>Roadmap оптимізації та розвитку</li>
+            </ul>
+            <div class="pricing-note">Для тих, хто хоче перевірити й посилити наявні рішення.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <h2>Як ми працюємо</h2>
+          <p class="section-subtitle">
+            Структурований процес від першої розмови до стійкого продакшену.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-item">
+            <div class="process-step">01</div>
+            <h3>Діагностика</h3>
+            <p>
+              Обговорюємо бізнес- і безпекові вимоги, поточний стан, обмеження та цілі.
+            </p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">02</div>
+            <h3>Архітектура</h3>
+            <p>
+              Формуємо архітектуру рішення, вибір стеку, план середовищ та інтеграцій.
+            </p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">03</div>
+            <h3>Реалізація</h3>
+            <p>
+              Розробка, тестування, впровадження CI/CD, налаштування моніторингу та логування.
+            </p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">04</div>
+            <h3>Супровід</h3>
+            <p>
+              Підтримка, оптимізація, аудит безпеки, планове розширення функціоналу.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-inline">
+          <div>
+            <h3>Готові обговорити ваш проєкт?</h3>
+            <p>Опишіть задачу й обмеження — ми запропонуємо формат співпраці та наступні кроки.</p>
+          </div>
+          <a href="#contact" class="btn">Запланувати дзвінок</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section section-muted" id="team">
+      <div class="container">
+        <div class="section-header">
+          <h2>Команда IT SOLVER</h2>
+          <p class="section-subtitle">
+            Кістяк — інженери, архітектори та фахівці з кібербезпеки. Під кожен проєкт
+            формується окрема команда.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card card-team">
+            <div class="team-photo">
+              <img src="https://via.placeholder.com/160/0a84ff/ffffff?text=CEO" alt="Founder / CEO" />
+            </div>
+            <h3>Founder / CEO</h3>
+            <p>
+              Визначає візію, стратегічні напрями, архітектурний контроль та формує
+              партнерства навколо IT SOLVER.
+            </p>
+          </div>
+
+          <div class="card card-team">
+            <div class="team-photo">
+              <img src="https://via.placeholder.com/160/0a84ff/ffffff?text=Tech" alt="Tech Lead" />
+            </div>
+            <h3>Tech Lead / Architect</h3>
+            <p>
+              Відповідає за архітектуру систем, стек, CI/CD, продуктивність
+              та наставництво розробників.
+            </p>
+          </div>
+
+          <div class="card card-team">
+            <div class="team-photo">
+              <img src="https://via.placeholder.com/160/0a84ff/ffffff?text=Security" alt="Security Lead" />
+            </div>
+            <h3>Cyber Security Lead</h3>
+            <p>
+              Проєктує безпекову архітектуру, моделі загроз, політики доступу
+              та супроводжує чутливі та держпроєкти.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-left">
+          <h2>Зв’яжіться з IT SOLVER</h2>
+          <p class="section-subtitle">
+            Розкажіть про ваш контекст: компанію, роль, сферу, поточний стан ІТ та кібербезпеки.
+            Ми повернемося з пропозицією можливих форматів.
+          </p>
+
+          <div class="contact-info">
+            <div>
+              <h4>Формат першого контакту</h4>
+              <p>Короткий дзвінок або лист з уточненням задачі та обмежень.</p>
+            </div>
+            <div>
+              <h4>Можливі мови спілкування</h4>
+              <p>Українська, англійська (за домовленістю).</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+          <div class="form-row">
+            <label>
+              Ім’я та роль
+              <input type="text" name="name" required placeholder="Наприклад: Владислав, CTO" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Організація
+              <input type="text" name="company" placeholder="Назва компанії / органу" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Email або Telegram
+              <input type="text" name="contact" required placeholder="email або @username" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Напрямок
+              <input type="text" name="direction" placeholder="Web Agency / Software / Cyber Security / Products" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Короткий опис задачі
+              <textarea name="comment" rows="4"
+                placeholder="Що потрібно вирішити, які є обмеження та терміни?"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn full-width">Відправити</button>
+          <p class="form-note">
+            Надсилаючи форму, ви погоджуєтесь на обробку контактних даних для організації зворотного зв’язку.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2025 IT SOLVER. Web · Software · Cyber Security · Products.</div>
+      <div class="footer-links">
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови співпраці</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
+</body>
+
+</html>
