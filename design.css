@@ -831,3 +831,150 @@ textarea:focus {
         flex-direction: column;
     }
 }
+
+/* GALLERY CASES */
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.work-gallery-track {
+  position: relative;
+  min-height: 700px; /* чтобы карточка всегда была высокой */
+}
+
+.work-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* карточка внутри слайда (переносим стиль с .work-card) */
+.work-slide .work-thumb {
+  width: 100%;
+  height: 700px; /* «вікно» перегляду */
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.16);
+  margin-bottom: 14px;
+  background: #ffffff;
+  position: relative;
+}
+
+
+.work-slide iframe {
+  /* розмір «умовного десктопа» всередині */
+    width: 1400px;
+    height: 1000px;
+    border: none;
+    transform: scale(0.7);
+    transform-origin: top left;
+
+  /* щоб iframe не вилазив за контейнер */
+  /* опціонально можна змістити трохи вліво/вправо, якщо треба центр */
+}
+
+.work-slide h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.work-slide p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* стрелки */
+
+.gallery-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  color: #0a84ff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.gallery-arrow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 38px rgba(10, 132, 255, 0.45);
+  background: #f8fbff;
+}
+
+.gallery-arrow:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+}
+
+/* счётчик */
+
+.work-gallery-counter {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.work-gallery-counter .sep {
+  opacity: 0.6;
+}
+
+/* адаптив */
+
+@media (max-width: 960px) {
+  .work-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-arrow {
+    position: static;
+    order: 2;
+  }
+
+  .work-gallery-track {
+    order: 1;
+    min-height: 520px;
+  }
+
+  .work-slide .work-thumb {
+    height: 520px;
+  }
+
+  .work-gallery {
+    justify-items: center;
+  }
+
+  .work-gallery > .gallery-arrow-prev,
+  .work-gallery > .gallery-arrow-next {
+    display: inline-flex;
+  }
+}
+
