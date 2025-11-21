@@ -102,11 +102,13 @@ a {
     background-clip: text;
     color: transparent;
 }
-.addFont{
+
+.addFont {
     font-family: 'Goldman', sans-serif;
     font-weight: 700;
     letter-spacing: 0.08em;
 }
+
 .logo {
     font-family: 'Goldman', sans-serif;
     font-weight: 700;
@@ -161,7 +163,7 @@ a {
     width: 20px;
     height: 2px;
     border-radius: 999px;
-    background: #111827;
+    background: #fff;
 }
 
 .mobile-menu {
@@ -343,7 +345,7 @@ a {
     padding: 10px 22px !important;
     border-radius: var(--radius-full);
     /* background: #ffffff; */
-    background: linear-gradient(160deg,#188DFF 0%, #0051C7 100%);
+    background: linear-gradient(160deg, #188DFF 0%, #0051C7 100%);
     color: var(--bg-white);
     font-weight: 500;
     font-size: 14px;
@@ -358,7 +360,7 @@ a {
 .btn:hover {
     /* transform: translateY(-1px); */
     box-shadow: 0 18px 46px rgba(10, 132, 255, 0.2);
-    background: linear-gradient(320deg,#188DFF 0%, #0051C7 100%);
+    background: linear-gradient(320deg, #188DFF 0%, #0051C7 100%);
     color: #ffffff;
 }
 
@@ -391,9 +393,11 @@ a {
     font-size: 28px;
     color: var(--text-main);
 }
-.dark-design{
+
+.dark-design {
     color: var(--bg-white) !important;
 }
+
 .section-subtitle {
     margin: 0;
     max-width: 600px;
@@ -804,7 +808,7 @@ textarea:focus {
     }
 
     .hero {
-        padding-top: 100px;
+        padding-top: 40px;
         padding-bottom: 90px;
     }
 
@@ -814,6 +818,11 @@ textarea:focus {
 }
 
 @media (max-width: 640px) {
+    .contact-lottie {
+        transform: scale(1.5) !important;
+        margin-top: 0px !important;
+    }
+
     .grid-4 {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -835,146 +844,221 @@ textarea:focus {
 /* GALLERY CASES */
 
 .work-gallery {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 16px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
 }
 
 .work-gallery-track {
-  position: relative;
-  min-height: 700px; /* чтобы карточка всегда была высокой */
+    position: relative;
+    min-height: 700px;
+    /* чтобы карточка всегда была высокой */
 }
 
 .work-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transform: translateX(20px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .work-slide.active {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 /* карточка внутри слайда (переносим стиль с .work-card) */
 .work-slide .work-thumb {
-  width: 100%;
-  height: 700px; /* «вікно» перегляду */
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.16);
-  margin-bottom: 14px;
-  background: #ffffff;
-  position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* тримаємо твої 4:3 */
+    height: auto;
+    /* висота рахується від ширини */
+    min-height: 500px;
+    /* на десктопі велике вікно */
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.16);
+    margin-bottom: 14px;
+    background: #ffffff;
+    position: relative;
 }
 
 
-.work-slide iframe {
-  /* розмір «умовного десктопа» всередині */
+/* .work-slide iframe {
     width: 1400px;
     height: 1000px;
     border: none;
     transform: scale(0.7);
     transform-origin: top left;
-
-  /* щоб iframe не вилазив за контейнер */
-  /* опціонально можна змістити трохи вліво/вправо, якщо треба центр */
+} */
+.work-slide .work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* або contain, якщо не хочеш обрізання */
+    display: block;
 }
 
 .work-slide h3 {
-  margin: 0 0 6px;
-  font-size: 18px;
-  color: var(--text-main);
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--text-main);
 }
 
 .work-slide p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--text-muted);
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
 }
 
 /* стрелки */
 
 .gallery-arrow {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.8);
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 1;
-  color: #0a84ff;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.8);
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    color: #0a84ff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .gallery-arrow:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 38px rgba(10, 132, 255, 0.45);
-  background: #f8fbff;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 38px rgba(10, 132, 255, 0.45);
+    background: #f8fbff;
 }
 
 .gallery-arrow:active {
-  transform: translateY(0);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+    transform: translateY(0);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
 }
 
 /* счётчик */
 
 .work-gallery-counter {
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .work-gallery-counter .sep {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 /* адаптив */
 
 @media (max-width: 960px) {
-  .work-gallery {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
-  }
+    .work-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
 
-  .gallery-arrow {
-    position: static;
-    order: 2;
-  }
+    .gallery-arrow {
+        position: static;
+        order: 2;
+    }
 
-  .work-gallery-track {
-    order: 1;
-    min-height: 520px;
-  }
+    .work-gallery-track {
+        min-height: 360px;
+    }
 
-  .work-slide .work-thumb {
-    height: 520px;
-  }
+    .work-slide .work-thumb {
+        min-height: 320px;
+        aspect-ratio: 4 / 3;
+    }
 
-  .work-gallery {
-    justify-items: center;
-  }
+    .work-gallery {
+        justify-items: center;
+    }
 
-  .work-gallery > .gallery-arrow-prev,
-  .work-gallery > .gallery-arrow-next {
-    display: inline-flex;
-  }
+    .work-gallery>.gallery-arrow-prev,
+    .work-gallery>.gallery-arrow-next {
+        display: inline-flex;
+    }
 }
 
+/* CONTACT CTA CARD (right column) */
+.contact-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.contact-card-title {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.contact-card-subtitle {
+    margin: 0 auto 18px;
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 420px;
+}
+
+.contact-card-actions {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-card-note {
+    margin: -2px 0 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* маленький роздільник "або" */
+.contact-card-divider {
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    margin: 6px 0 2px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+/* Telegram button variant */
+.btn-telegram {
+    background: #0b1120;
+    color: #fff;
+    box-shadow: none;
+}
+
+.btn-telegram:hover {
+    background: #111827;
+    box-shadow: 0 18px 46px rgba(2, 6, 23, 0.22);
+    color: #fff;
+}
+
+.contact-card-footer {
+    margin-top: 12px;
+}
+
+.contact-lottie {
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+    margin-top: 8px;
+}
