@@ -819,7 +819,7 @@ textarea:focus {
 
 @media (max-width: 640px) {
     .contact-lottie {
-        transform: scale(1.5) !important;
+        transform: scale(1) !important;
         margin-top: 0px !important;
     }
 
